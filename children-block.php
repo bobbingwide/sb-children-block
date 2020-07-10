@@ -55,6 +55,11 @@ function oik_children_block_block_init() {
 		'editor_script' => 'oik-children-block-block-editor',
 		'editor_style'  => 'oik-children-block-block-editor',
 		'style'         => 'oik-children-block-block',
+		'render_callback'=>'oik_children_block_dynamic_block',
 	) );
 }
 add_action( 'init', 'oik_children_block_block_init' );
+
+function oik_children_block_dynamic_block() {
+	return "Children block - Server side rendered";
+}
