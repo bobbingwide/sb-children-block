@@ -31,11 +31,8 @@ import './editor.scss';
 export default function Edit( { className } ) {
 	return (
 		<Fragment>
-		<p className={ className }>
-			{ __( 'Children block – hello from the editor!', 'oik' ) }
-		</p>
 			<ServerSideRender
-				block="oik/children-block" 
+				block="oik/children-block"
 			/>
 		</Fragment>
 	);
