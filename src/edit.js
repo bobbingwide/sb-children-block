@@ -5,6 +5,10 @@
  */
 import { __ } from '@wordpress/i18n';
 
+import { ServerSideRender } from '@wordpress/editor';
+import { Fragment} from '@wordpress/element';
+
+
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -26,8 +30,13 @@ import './editor.scss';
  */
 export default function Edit( { className } ) {
 	return (
+		<Fragment>
 		<p className={ className }>
 			{ __( 'Children block – hello from the editor!', 'oik' ) }
 		</p>
+			<ServerSideRender
+				block="oik/children-block" 
+			/>
+		</Fragment>
 	);
 }
