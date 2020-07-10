@@ -32,21 +32,18 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-registerBlockType( 'create-block/children-block', {
+registerBlockType( 'oik/children-block', {
 	/**
 	 * This is the display title for your block, which can be translated with `i18n` functions.
 	 * The block inserter will show this name.
 	 */
-	title: __( 'Children Block', 'create-block' ),
+	title: __( 'Children block', 'oik' ),
 
 	/**
 	 * This is a short description for your block, can be translated with `i18n` functions.
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
-	description: __(
-		'Example block written with ESNext standard and JSX support – build step required.',
-		'create-block'
-	),
+	description: __( 'List children of the current content as links.', 'oik' ),
 
 	/**
 	 * Blocks are grouped into categories to help users browse and discover them.
@@ -58,7 +55,7 @@ registerBlockType( 'create-block/children-block', {
 	 * An icon property should be specified to make it easier to identify a block.
 	 * These can be any of WordPress’ Dashicons, or a custom svg element.
 	 */
-	icon: 'smiley',
+	icon: 'list-view',
 
 	/**
 	 * Optional block extended support features.

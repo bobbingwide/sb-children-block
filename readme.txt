@@ -1,5 +1,5 @@
-=== Children Block ===
-Contributors:      The WordPress Contributors
+=== Children block ===
+Contributors:      bobbingwide
 Tags:              block
 Requires at least: 5.3.2
 Tested up to:      5.4.1
@@ -8,7 +8,7 @@ Requires PHP:      7.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block written with ESNext standard and JSX support – build step required.
+List children of the current content as links.
 
 == Description ==
 

@@ -27,7 +27,7 @@ import './editor.scss';
 export default function Edit( { className } ) {
 	return (
 		<p className={ className }>
-			{ __( 'Children Block – hello from the editor!', 'create-block' ) }
+			{ __( 'Children block – hello from the editor!', 'oik' ) }
 		</p>
 	);
 }

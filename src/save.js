@@ -16,11 +16,6 @@ import { __ } from '@wordpress/i18n';
  */
 export default function save() {
 	return (
-		<p>
-			{ __(
-				'Children Block – hello from the saved content!',
-				'create-block'
-			) }
-		</p>
+		<p>{ __( 'Children block – hello from the saved content!', 'oik' ) }</p>
 	);
 }
