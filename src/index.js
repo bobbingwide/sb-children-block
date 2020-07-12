@@ -24,7 +24,7 @@ import './style.scss';
 /**
  * Internal dependencies
  */
-import Edit from './edit';
+import edit from './edit';
 import save from './save';
 
 /**
@@ -65,10 +65,14 @@ registerBlockType( 'oik/children-block', {
 		html: false,
 	},
 
+	attributes: {
+		depth: { type: 'string', default: '0', },
+	},
+
 	/**
 	 * @see ./edit.js
 	 */
-	edit: Edit,
+	edit: edit,
 
 	/**
 	 * @see ./save.js

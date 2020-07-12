@@ -7,7 +7,8 @@ import { __ } from '@wordpress/i18n';
 
 import { ServerSideRender } from '@wordpress/editor';
 import { Fragment} from '@wordpress/element';
-
+import { InspectorControls } from '@wordpress/block-editor';
+import { TextControl, PanelBody } from '@wordpress/components'
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -28,11 +29,23 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit( { className } ) {
+export default function edit ( { attributes, className, isSelected, setAttributes } )   {
+
+	const onChangeDepth = ( event ) => {
+			setAttributes( { depth: event } );
+		};
+
+
+
 	return (
 		<Fragment>
+			<InspectorControls>
+				<PanelBody>
+					<TextControl label="Depth" value={attributes.depth} onChange={onChangeDepth} />
+				</PanelBody>
+			</InspectorControls>
 			<ServerSideRender
-				block="oik/children-block"
+				block="oik/children-block" attributes={attributes}
 			/>
 		</Fragment>
 	);
