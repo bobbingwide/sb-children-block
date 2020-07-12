@@ -56,10 +56,42 @@ function oik_children_block_block_init() {
 		'editor_style'  => 'oik-children-block-block-editor',
 		'style'         => 'oik-children-block-block',
 		'render_callback'=>'oik_children_block_dynamic_block',
+		'attributes' => [
+			'depth' => [ 'type' => 'string'],
+			'className' => [ 'type' => 'string'],
+		]
 	) );
 }
 add_action( 'init', 'oik_children_block_block_init' );
 
-function oik_children_block_dynamic_block() {
-	return "Children block - Server side rendered";
+/**
+ * Returns a list of child pages of the current content as links.
+ *
+ * wp-List_pages supports a tree using the `depth=` parameter.
+ *
+ * depth= | Meaning
+ * ------ | -------
+ * -1 | Don't show the nesting
+ * 0 | Any depth
+ * 1 | Children
+ * 2 | Children and grandchildren
+ * n>2 | More descendants
+ *
+ * blank is equivalent to the default: 0
+ *
+ * Doesn't check if the post is of a hierarchical post_type?
+ *
+ *
+ * @param $attributes
+ * @return string|void
+ */
+function oik_children_block_dynamic_block( $attributes ) {
+	bw_trace2();
+	$depth = isset( $attributes['depth']) ? $attributes['depth'] : 0;
+	$post = get_post();
+	$args = [ 'child_of' => $post->ID, 'echo' => false, 'title_li' => null, 'depth' => $depth ];
+	$html = '<ul>';
+	$html .= wp_list_pages( $args );
+	$html .= '</ul>';
+	return $html;
 }
