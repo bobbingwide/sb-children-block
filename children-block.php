@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Children block
  * Description:     List children of the current content as links.
- * Version:         0.1.0
+ * Version:         0.2.0
  * Author:          bobbingwide
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
@@ -61,6 +61,16 @@ function oik_children_block_block_init() {
 			'className' => [ 'type' => 'string'],
 		]
 	) );
+
+	register_block_type( 'oik/parent-block', array(
+		'editor_script' => 'oik-children-block-block-editor',
+		'editor_style'  => 'oik-children-block-block-editor',
+		'style'         => 'oik-children-block-block',
+		'render_callback'=>'oik_parent_block_dynamic_block',
+		'attributes' => [
+			'className' => [ 'type' => 'string'],
+		]
+	) );
 }
 add_action( 'init', 'oik_children_block_block_init' );
 
@@ -71,22 +81,21 @@ add_action( 'init', 'oik_children_block_block_init' );
  *
  * depth= | Meaning
  * ------ | -------
- * -1 | Don't show the nesting
  * 0 | Any depth
  * 1 | Children
  * 2 | Children and grandchildren
  * n>2 | More descendants
+ * -1 | Don't show the nesting
  *
  * blank is equivalent to the default: 0
  *
- * Doesn't check if the post is of a hierarchical post_type?
- *
+ * Note: This routine doesn't check if the post is of a hierarchical post_type.
  *
  * @param $attributes
  * @return string|void
  */
 function oik_children_block_dynamic_block( $attributes ) {
-	bw_trace2();
+	//bw_trace2();
 	$depth = isset( $attributes['depth']) ? $attributes['depth'] : 0;
 	$post = get_post();
 	$args = [ 'child_of' => $post->ID, 'echo' => false, 'title_li' => null, 'depth' => $depth ];
@@ -94,4 +103,18 @@ function oik_children_block_dynamic_block( $attributes ) {
 	$html .= wp_list_pages( $args );
 	$html .= '</ul>';
 	return $html;
+}
+
+function oik_parent_block_dynamic_block( $attributes ) {
+
+	$id = wp_get_post_parent_id( null );
+	if ( $id ) {
+		$url = get_permalink( $id );
+		$title = get_the_title( $id );
+		$html = "<a href=\"$url\" >$title</a>";
+	} else {
+		$html = "No parent";
+	}
+	return $html;
+
 }
