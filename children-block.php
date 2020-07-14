@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Children block
  * Description:     List children of the current content as links.
- * Version:         0.3.0
+ * Version:         0.3.1
  * Author:          bobbingwide
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
