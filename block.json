@@ -1,10 +1,10 @@
 {
-	"name": "oik/children-block",
+	"name": "sb/children-block",
 	"title": "Children block",
 	"category": "widgets",
 	"icon": "list-view",
 	"description": "List children of the current content as links.",
-	"textdomain": "oik",
+	"textdomain": "sb-children-block",
 	"supports": {
 		"html": false
 	},
