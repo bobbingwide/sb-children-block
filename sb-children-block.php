@@ -61,16 +61,6 @@ function sb_children_block_block_init() {
 			'className' => [ 'type' => 'string'],
 		]
 	) );
-
-	register_block_type( 'sb/parent-block', array(
-		'editor_script' => 'sb-children-block-block-editor',
-		'editor_style'  => 'sb-children-block-block-editor',
-		'style'         => 'sb-children-block-block',
-		'render_callback'=>'sb-parent_block_dynamic_block',
-		'attributes' => [
-			'className' => [ 'type' => 'string'],
-		]
-	) );
 }
 add_action( 'init', 'sb_children_block_block_init' );
 
@@ -103,18 +93,4 @@ function sb_children_block_dynamic_block( $attributes ) {
 	$html .= wp_list_pages( $args );
 	$html .= '</ul>';
 	return $html;
-}
-
-function sb_parent_block_dynamic_block( $attributes ) {
-
-	$id = wp_get_post_parent_id( null );
-	if ( $id ) {
-		$url = get_permalink( $id );
-		$title = get_the_title( $id );
-		$html = "<a href=\"$url\" >$title</a>";
-	} else {
-		$html = "No parent";
-	}
-	return $html;
-
 }
