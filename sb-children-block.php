@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:     Children block
+ * Plugin Name:     SB Children block
  * Description:     List children of the current content as links.
- * Version:         0.3.2
+ * Version:         0.4.0
  * Author:          bobbingwide
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:     oik
+ * Text Domain:     sb-children-block
  *
- * @package         oik
+ * @package         sb-children-block
  */
 
 /**
@@ -17,19 +17,19 @@
  *
  * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/applying-styles-with-stylesheets/
  */
-function oik_children_block_block_init() {
+function sb_children_block_block_init() {
 	$dir = dirname( __FILE__ );
 
 	$script_asset_path = "$dir/build/index.asset.php";
 	if ( ! file_exists( $script_asset_path ) ) {
 		throw new Error(
-			'You need to run `npm start` or `npm run build` for the "oik/children-block" block first.'
+			'You need to run `npm start` or `npm run build` for the "sb/children-block" block first.'
 		);
 	}
 	$index_js     = 'build/index.js';
 	$script_asset = require( $script_asset_path );
 	wp_register_script(
-		'oik-children-block-block-editor',
+		'sb-children-block-block-editor',
 		plugins_url( $index_js, __FILE__ ),
 		$script_asset['dependencies'],
 		$script_asset['version']
@@ -37,7 +37,7 @@ function oik_children_block_block_init() {
 
 	$editor_css = 'build/index.css';
 	wp_register_style(
-		'oik-children-block-block-editor',
+		'sb-children-block-block-editor',
 		plugins_url( $editor_css, __FILE__ ),
 		array(),
 		filemtime( "$dir/$editor_css" )
@@ -45,34 +45,34 @@ function oik_children_block_block_init() {
 
 	$style_css = 'build/style-index.css';
 	wp_register_style(
-		'oik-children-block-block',
+		'sb-children-block-block',
 		plugins_url( $style_css, __FILE__ ),
 		array(),
 		filemtime( "$dir/$style_css" )
 	);
 
-	register_block_type( 'oik/children-block', array(
-		'editor_script' => 'oik-children-block-block-editor',
-		'editor_style'  => 'oik-children-block-block-editor',
-		'style'         => 'oik-children-block-block',
-		'render_callback'=>'oik_children_block_dynamic_block',
+	register_block_type( 'sb/children-block', array(
+		'editor_script' => 'sb-children-block-block-editor',
+		'editor_style'  => 'sb-children-block-block-editor',
+		'style'         => 'sb-children-block-block',
+		'render_callback'=>'sb_children_block_dynamic_block',
 		'attributes' => [
 			'depth' => [ 'type' => 'string'],
 			'className' => [ 'type' => 'string'],
 		]
 	) );
 
-	register_block_type( 'oik/parent-block', array(
-		'editor_script' => 'oik-children-block-block-editor',
-		'editor_style'  => 'oik-children-block-block-editor',
-		'style'         => 'oik-children-block-block',
-		'render_callback'=>'oik_parent_block_dynamic_block',
+	register_block_type( 'sb/parent-block', array(
+		'editor_script' => 'sb-children-block-block-editor',
+		'editor_style'  => 'sb-children-block-block-editor',
+		'style'         => 'sb-children-block-block',
+		'render_callback'=>'sb-parent_block_dynamic_block',
 		'attributes' => [
 			'className' => [ 'type' => 'string'],
 		]
 	) );
 }
-add_action( 'init', 'oik_children_block_block_init' );
+add_action( 'init', 'sb_children_block_block_init' );
 
 /**
  * Returns a list of child pages of the current content as links.
@@ -94,7 +94,7 @@ add_action( 'init', 'oik_children_block_block_init' );
  * @param $attributes
  * @return string|void
  */
-function oik_children_block_dynamic_block( $attributes ) {
+function sb_children_block_dynamic_block( $attributes ) {
 	//bw_trace2();
 	$depth = isset( $attributes['depth']) ? $attributes['depth'] : 0;
 	$post = get_post();
@@ -105,7 +105,7 @@ function oik_children_block_dynamic_block( $attributes ) {
 	return $html;
 }
 
-function oik_parent_block_dynamic_block( $attributes ) {
+function sb_parent_block_dynamic_block( $attributes ) {
 
 	$id = wp_get_post_parent_id( null );
 	if ( $id ) {
