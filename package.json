@@ -1,6 +1,6 @@
 {
 	"name": "sb-children-block",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "List children of the current content as links.",
 	"author": "bobbingwide",
 	"license": "GPL-2.0-or-later",
@@ -11,7 +11,10 @@
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"start": "wp-scripts start",
-		"packages-update": "wp-scripts packages-update"
+	  	"dev": "wp-scripts start",
+		"packages-update": "wp-scripts packages-update",
+	  	"makepot": "wp i18n make-pot . languages/sb-children-block.pot --exclude=node_modules,vendor,src",
+	  	"makejson": "wp i18n make-json languages --no-purge"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^12.1.1"
