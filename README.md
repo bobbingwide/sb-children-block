@@ -1,4 +1,4 @@
-# Children block 
+# SB Children block 
 ![banner](https://raw.githubusercontent.com/bobbingwide/children-block/master/assets/children-block-banner-772x250.jpg)
 * Contributors:      bobbingwide
 * Tags:              block, children, parent, links
