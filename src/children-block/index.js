@@ -37,13 +37,13 @@ registerBlockType( 'sb/children-block', {
 	 * This is the display title for your block, which can be translated with `i18n` functions.
 	 * The block inserter will show this name.
 	 */
-	title: __( 'Children block', 'oik' ),
+	title: __( 'Children block', 'sb-children-block' ),
 
 	/**
 	 * This is a short description for your block, can be translated with `i18n` functions.
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
-	description: __( 'List children of the current content as links.', 'oik' ),
+	description: __( 'List children of the current content as links.', 'sb-children-block' ),
 
 	/**
 	 * Blocks are grouped into categories to help users browse and discover them.
@@ -56,6 +56,12 @@ registerBlockType( 'sb/children-block', {
 	 * These can be any of WordPress’ Dashicons, or a custom svg element.
 	 */
 	icon: 'list-view',
+
+	keywords: [
+		__( 'Tree', 'sb-children-block' ),
+		__( 'Descendents', 'sb-children-block' ),
+		__( 'Child list', 'sb-children-block' ),
+	],
 
 	/**
 	 * Optional block extended support features.

@@ -41,7 +41,7 @@ export default function edit ( { attributes, className, isSelected, setAttribute
 		<Fragment>
 			<InspectorControls>
 				<PanelBody>
-					<TextControl label="Depth" value={attributes.depth} onChange={onChangeDepth} />
+					<TextControl label={ __("Depth",'sb-children-block')} value={attributes.depth} onChange={onChangeDepth} />
 				</PanelBody>
 			</InspectorControls>
 			<ServerSideRender
