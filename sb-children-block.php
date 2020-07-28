@@ -37,6 +37,12 @@ function sb_children_block_block_init() {
 		$script_asset['version']
 	);
 
+	/*
+	 * Localise the script by loading the required strings for the build/index.js file
+	 * from the locale specific .json file in the languages folder
+	 */
+	$ok = wp_set_script_translations( 'sb-children-block-block-editor', 'sb-children-block' , $dir .'/languages' );
+
 	$editor_css = 'build/index.css';
 	wp_register_style(
 		'sb-children-block-block-editor',
@@ -87,6 +93,7 @@ add_action( 'init', 'sb_children_block_block_init' );
  * @return string|void
  */
 function sb_children_block_dynamic_block( $attributes ) {
+	load_plugin_textdomain( 'sb-children-block', false, 'sb-children-block/languages' );
 	//bw_trace2();
 	$depth = isset( $attributes['depth']) ? $attributes['depth'] : 0;
 	$post = get_post();
