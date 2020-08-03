@@ -5,10 +5,16 @@
  */
 import { __ } from '@wordpress/i18n';
 
+/**
+ * These imports were added using the best guess technique.
+ * @TODO Confirm what they should be!
+ */
 import { ServerSideRender } from '@wordpress/editor';
 import { Fragment} from '@wordpress/element';
 import { InspectorControls } from '@wordpress/block-editor';
-import { TextControl, PanelBody } from '@wordpress/components'
+//const { InspectorControls } = wp.blockEditor;
+// deprecated.js?ver=cd9e35508705772fbc5e2d9736bde31b:177 wp.editor.InspectorControls is deprecated. Please use wp.blockEditor.InspectorControls instead.
+import { TextControl, PanelBody } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -41,7 +47,7 @@ export default function edit ( { attributes, className, isSelected, setAttribute
 		<Fragment>
 			<InspectorControls>
 				<PanelBody>
-					<TextControl label={__("Depth",'sb-children-block')} value={attributes.depth} onChange={onChangeDepth} />
+					<TextControl label={__("Depth",'sb-children-block')} value={attributes.depth} onChange={onChangeDepth} help={"0 for all levels,1-n for defined,-1 for flat, "} />
 				</PanelBody>
 			</InspectorControls>
 			<ServerSideRender
