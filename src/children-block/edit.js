@@ -40,14 +40,13 @@ export default function edit ( { attributes, className, isSelected, setAttribute
 	const onChangeDepth = ( event ) => {
 			setAttributes( { depth: event } );
 		};
-
-
+	const help = __( "0 for all levels, 1-n for defined,-1 for flat.", 'sb-children-block');
 
 	return (
 		<Fragment>
 			<InspectorControls>
 				<PanelBody>
-					<TextControl label={__("Depth",'sb-children-block')} value={attributes.depth} onChange={onChangeDepth} help={"0 for all levels,1-n for defined,-1 for flat, "} />
+					<TextControl label={__("Depth",'sb-children-block')} value={attributes.depth} onChange={onChangeDepth} help={help} />
 				</PanelBody>
 			</InspectorControls>
 			<ServerSideRender
