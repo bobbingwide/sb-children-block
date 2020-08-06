@@ -50,7 +50,7 @@ export default function edit ( { attributes, className, isSelected, setAttribute
 				</PanelBody>
 			</InspectorControls>
 			<ServerSideRender
-				block="sb/children-block" attributes={attributes}
+				block="oik-sb/children" attributes={attributes}
 			/>
 		</Fragment>
 	);

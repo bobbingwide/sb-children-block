@@ -1,6 +1,6 @@
 {
-	"name": "sb/children-block",
-	"title": "Children block",
+	"name": "oik-sb/children",
+	"title": "Children",
 	"category": "widgets",
 	"icon": "list-view",
 	"description": "List children of the current content as links.",

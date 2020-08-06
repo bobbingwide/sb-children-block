@@ -32,12 +32,12 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
-registerBlockType( 'sb/children-block', {
+registerBlockType( 'oik-sb/children', {
 	/**
 	 * This is the display title for your block, which can be translated with `i18n` functions.
 	 * The block inserter will show this name.
 	 */
-	title: __( 'Children block', 'sb-children-block' ),
+	title: __( 'Children', 'sb-children-block' ),
 
 	/**
 	 * This is a short description for your block, can be translated with `i18n` functions.

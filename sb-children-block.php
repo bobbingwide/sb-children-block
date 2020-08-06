@@ -3,7 +3,7 @@
  * Plugin Name:     SB Children block
  * Plugin URI: 		https://www.oik-plugins.com/oik-plugins/sb-children-block
  * Description:     List children of the current content as links.
- * Version:         0.5.3
+ * Version:         1.0.0
  * Author:          bobbingwide
  * Author URI: 		https://www.bobbingwide.com/about-bobbing-wide
  * License:         GPL-2.0-or-later
@@ -59,7 +59,7 @@ function sb_children_block_block_init() {
 		filemtime( "$dir/$style_css" )
 	);
 
-	register_block_type( 'sb/children-block', array(
+	register_block_type( 'oik-sb/children', array(
 		'editor_script' => 'sb-children-block-block-editor',
 		'editor_style'  => 'sb-children-block-block-editor',
 		'style'         => 'sb-children-block-block',

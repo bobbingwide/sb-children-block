@@ -1,6 +1,6 @@
 {
 	"name": "sb-children-block",
-	"version": "0.5.0",
+	"version": "1.0.0",
 	"description": "List children of the current content as links.",
 	"author": "bobbingwide",
 	"license": "GPL-2.0-or-later",
@@ -21,9 +21,5 @@
 		"@wordpress/scripts": "^12.1.1"
 	},
 	"dependencies": {
-		"@wordpress/block-editor": "^4.3.3",
-		"@wordpress/create-block": "^0.16.0",
-		"@wordpress/editor": "^9.20.3",
-		"@wordpress/server-side-render": "^1.16.3"
 	}
 }
