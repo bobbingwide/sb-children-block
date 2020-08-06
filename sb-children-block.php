@@ -88,17 +88,18 @@ add_action( 'init', 'sb_children_block_block_init' );
  * blank is equivalent to the default: 0
  *
  * Note: This routine doesn't check if the post is of a hierarchical post_type.
+ * If it isn't, or if there are no descendants the result is an empty list.
  *
  * @param $attributes
  * @return string|void
  */
 function sb_children_block_dynamic_block( $attributes ) {
 	load_plugin_textdomain( 'sb-children-block', false, 'sb-children-block/languages' );
-	//bw_trace2();
+	$className = isset( $attributes['className']) ? $attributes['className'] : 'wp-block-oik-sb-children';
 	$depth = isset( $attributes['depth']) ? $attributes['depth'] : 0;
 	$post = get_post();
 	$args = [ 'child_of' => $post->ID, 'echo' => false, 'title_li' => null, 'depth' => $depth ];
-	$html = '<ul>';
+	$html = '<ul class="'. $className . '">';
 	$html .= wp_list_pages( $args );
 	$html .= '</ul>';
 	return $html;
