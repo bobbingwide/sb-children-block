@@ -1,6 +1,6 @@
 {
 	"name": "sb-children-block",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "List children of the current content as links.",
 	"author": "bobbingwide",
 	"license": "GPL-2.0-or-later",
