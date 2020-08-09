@@ -61,7 +61,7 @@ registerBlockType( 'oik-sb/children', {
 		__( 'Tree', 'sb-children-block' ),
 		__( 'Descendents', 'sb-children-block' ),
 		__( 'Child list', 'sb-children-block' ),
-		--( 'Page list', 'sb-children-block' ),
+		__( 'Page list', 'sb-children-block' ),
 	],
 
 	/**
