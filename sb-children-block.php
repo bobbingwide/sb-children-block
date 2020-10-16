@@ -98,7 +98,7 @@ function sb_children_block_dynamic_block( $attributes ) {
 	$className = isset( $attributes['className']) ? $attributes['className'] : 'wp-block-oik-sb-children';
 	$depth = isset( $attributes['depth']) ? $attributes['depth'] : 0;
 	$post = get_post();
-	$args = [ 'child_of' => $post->ID, 'echo' => false, 'title_li' => null, 'depth' => $depth ];
+	$args = [ 'child_of' => $post->ID, 'echo' => false, 'title_li' => null, 'depth' => $depth, 'post_type' => $post->post_type ];
 	$html = '<ul class="'. $className . '">';
 	$html .= wp_list_pages( $args );
 	$html .= '</ul>';
