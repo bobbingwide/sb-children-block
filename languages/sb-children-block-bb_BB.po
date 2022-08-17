@@ -1,8 +1,8 @@
-# Copyright (C) 2020 bobbingwide
-# This file is distributed under the same license as the SB Children block plugin.
+# Copyright (C) 2022 bobbingwide
+# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: SB Children block 1.1.0\n"
+"Project-Id-Version: SB Children block 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sb-children-block\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,67 +11,62 @@ msgstr ""
 "Language: bb_BB\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-10-18T07:36:37+00:00\n"
+"POT-Creation-Date: 2022-08-17T10:32:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: sb-children-block\n"
-#. Plugin Name of the plugin
 msgid "SB Children block"
 msgstr "SB Cihdlern bolck"
 
-
-#. Plugin URI of the plugin
 msgid "https://www.oik-plugins.com/oik-plugins/sb-children-block"
 msgstr "https://www.oik-plugins.com/oik-plugins/sb-children-block"
 
-
-#. Description of the plugin
-#: build/index.js:1
 msgid "List children of the current content as links."
 msgstr "Lsit cihdlern Of thE cruernt cnoetnt As lniks."
 
-
-#. Author of the plugin
 msgid "bobbingwide"
 msgstr "bboibgniwde"
 
-
-#. Author URI of the plugin
 msgid "https://www.bobbingwide.com/about-bobbing-wide"
 msgstr "https://www.bobbingwide.com/about-bobbing-wide"
 
-
-#: build/index.js:1
-msgid "Children"
-msgstr "Cihdlern"
-
-
-#: build/index.js:1
-msgid "Tree"
-msgstr "Tere"
-
-
-#: build/index.js:1
-msgid "Descendents"
-msgstr "Dseecdnnets"
-
-
-#: build/index.js:1
-msgid "Child list"
-msgstr "Cihld lsit"
-
-
-#: build/index.js:1
-msgid "Page list"
-msgstr "Pgae lsit"
-
-
-#: build/index.js:1
+#: build/index.js:87
+#: build/index.js:50
 msgid "0 for all levels, 1-n for defined,-1 for flat."
 msgstr "0 fOr All lveles, 1-n fOr dfenied,-1 fOr falt."
 
-
-#: build/index.js:1
+#: build/index.js:91
+#: build/index.js:57
 msgid "Depth"
 msgstr "Dpeth"
+
+#: block.json
+msgctxt "block title"
+msgid "Children"
+msgstr "Cihdlern"
+
+#: block.json
+msgctxt "block description"
+msgid "List children of the current content as links."
+msgstr "Lsit cihdlern Of thE cruernt cnoetnt As lniks."
+
+#: block.json
+msgctxt "block keyword"
+msgid "Tree"
+msgstr "Tere"
+
+#: block.json
+msgctxt "block keyword"
+msgid "Descendents"
+msgstr "Dseecdnnets"
+
+#: block.json
+msgctxt "block keyword"
+msgid "Child list"
+msgstr "Cihld lsit"
+
+#: block.json
+msgctxt "block keyword"
+msgid "Page list"
+msgstr "Pgae lsit"
 
