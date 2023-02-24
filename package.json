@@ -22,9 +22,9 @@
 		"l10n": "l10n sb-children-block"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^23.7.1"
+		"@wordpress/scripts": "^25.4.0"
 	},
 	"dependencies": {
-		"@wordpress/server-side-render": "^3.13.0"
+		"@wordpress/server-side-render": "^4.4.0"
 	}
 }
