@@ -3,8 +3,8 @@
 * Contributors:      bobbingwide
 * Tags:              block, children, links, offspring, descendents, descendants
 * Requires at least: 5.4.2
-* Tested up to:      6.0.1
-* Stable tag:        1.2.0
+* Tested up to:      6.1.1
+* Stable tag:        1.2.1
 * Requires PHP:      7.2.0
 * License:           GPL-2.0-or-later
 * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -66,15 +66,15 @@ If you do wish to modify the code then you can find instructions in the src fold
 4. Children block depth=-1
 
 ## Upgrade Notice 
-# 1.2.0 
-Upgrade for improved styling capability of colors, typography and spacing.
-Tested with WordPress 6.0.1 and Gutenberg 13.8.2
+# 1.2.1 
+Tested with WordPress 6.1.1 and Gutenberg 15.2.0
 
 ## Changelog 
-# 1.2.0 
-* Changed: Update wp-scripts and rework block registration #15
-* Changed: Improve block.json to add supports attributes for color, typography and spacing #14
-* Tested: With WordPress 6.0.1 and WordPress Multi Site
-* Tested: With Gutenberg 13.8.2
+# 1.2.1 
+* Changed: Update wp-scripts and rebuild #21
+* Changed: explicitely state support for link and text colors
+* Changed: Update src/README.md - copied from sb-chart-block #11
+* Tested: With WordPress 6.1.1 and WordPress Multi Site
+* Tested: With Gutenberg 15.2.0
 * Tested: With PHP 8.0
 
