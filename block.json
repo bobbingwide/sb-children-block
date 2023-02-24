@@ -1,4 +1,5 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
   	"apiVersion": 2,
 	"name": "oik-sb/children",
 	"title": "Children",
@@ -12,7 +13,9 @@
 	  	"align": false,
 	  	"color": {
 		  "background": true,
-		  "link": true
+		  "link": true,
+		  "text": true
+
 		},
 	  	"typography": {
 		  "fontSize": true,
