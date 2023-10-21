@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.051119">
+    <testsuite name="sb-children-block" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.051119">
+      <testsuite name="Tests_load_php" file="C:\apache\htdocs\wordpress\wp-content\plugins\sb-children-block\tests\test-a-load-php.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.051119">
+        <testcase name="test_load_plugin" class="Tests_load_php" classname="Tests_load_php" file="C:\apache\htdocs\wordpress\wp-content\plugins\sb-children-block\tests\test-a-load-php.php" line="24" assertions="1" time="0.051119"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
