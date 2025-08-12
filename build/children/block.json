@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "oik-sb/children",
+  "title": "Children",
+  "category": "widgets",
+  "icon": "list-view",
+  "description": "List children of the current content as links.",
+  "textdomain": "sb-children-block",
+  "keywords": [
+    "Tree",
+    "Descendents",
+    "Child list",
+    "Page list"
+  ],
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": {
+      "background": true,
+      "link": true,
+      "text": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    }
+  },
+  "attributes": {
+    "depth": {
+      "type": "string",
+      "default": "0"
+    }
+  },
+  "editorScript": "file:../../build/children.js",
+  "editorStyle": "file:../../build/children.css",
+  "style": "file:../../build/style-children.css"
+}

@@ -3,7 +3,7 @@
  * Plugin Name:     SB Children block
  * Plugin URI: 		https://www.oik-plugins.com/oik-plugins/sb-children-block
  * Description:     List children of the current content as links.
- * Version:         1.2.3
+ * Version:         1.3.0
  * Author:          bobbingwide
  * Author URI: 		https://www.bobbingwide.com/about-bobbing-wide
  * License:         GPL-2.0-or-later
@@ -11,7 +11,7 @@
  * Text Domain:     sb-children-block
  *
  * @package         sb-children-block
- * @copyright       (C) Copyright Bobbing Wide 2020-2023
+ * @copyright       (C) Copyright Bobbing Wide 2020-2025
  */
 
 /**
@@ -23,7 +23,7 @@
 /**
  * Registers the oik-sb/children block.
  *
- * Registers the block using the metadata loaded from the `block.json` file.
+ * Registers the block using the metadata loaded from the `build/children/block.json` file.
  * Behind the scenes it also registers all assets, so they can be enqueued
  * through the block editor in the corresponding context.
  *
@@ -34,7 +34,7 @@ function sb_children_block_block_init() {
 	$dir = dirname( __FILE__ );
 	load_plugin_textdomain( 'sb-children-block', false, 'sb-children-block/languages' );
 	$args = [ 'render_callback' => 'sb_children_block_dynamic_block'];
-	register_block_type_from_metadata( __DIR__, $args );
+	register_block_type_from_metadata( __DIR__ . '/build/children', $args );
 	/**
 	 * Localise the script by loading the required strings for the build/index.js file
 	 * from the locale specific .json file in the languages folder.
