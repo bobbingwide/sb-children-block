@@ -2,8 +2,8 @@
 Contributors:      bobbingwide
 Tags:              block, children, links, offspring, descendents, descendants
 Requires at least: 5.4.2
-Tested up to:      6.4-RC1
-Stable tag:        1.2.3
+Tested up to:      6.8.2
+Stable tag:        1.3.0
 Requires PHP:      7.2.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -56,7 +56,7 @@ If your first language is not English then you could try:
 
 = Do I need to build this block? =
 No. The plugin is delivered with the production version of the block.
-If you do wish to modify the code then you can find instructions in the src folder.
+The source and build routine for the block is now in https://github.com/bobbingwide/sb-starting-block.
 
 == Screenshots ==
 1. Children block depth=0
@@ -65,13 +65,16 @@ If you do wish to modify the code then you can find instructions in the src fold
 4. Children block depth=-1
 
 == Upgrade Notice ==
-= 1.2.3 =
-Upgrade for support for PHP 8.1 and PHP 8.2. Tested with WordPress 6.4-RC1 and Gutenberg 16.8.1
+= 1.3.0 =
+Upgrade for support for PHP 8.3 and PHP 8.4. 
 
 == Changelog ==
-= 1.2.3 =
-* Changed: Support PHP 8.1 and PHP 8.2 #23
-* Tested: With WordPress 6.4-RC1 and WordPress Multisite
-* Tested: With Gutenberg 16.8.1
-* Tested: With PHP 8.0, PHP 8.1 and PHP 8.2
+= 1.3.0 =
+* Deleted: Remove source for the block - see sb-starting-block #21
+* Changed: Remove wp-scripts build - uses sb-starting-block to build oik-sb/children #21
+* Changed: Update files built with wp-scripts v30.21.0 by sb-starting-block #21
+* Changed: Build the oik-sb/children block in sb-starting-block #21
+* Tested: With WordPress 6.8.2 and WordPress Multisite
+* Tested: With Gutenberg 21.3.0
+* Tested: With PHP 8.3 and PHP 8.4
 * Tested: With PHPUnit 9.6
